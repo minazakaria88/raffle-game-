@@ -9,24 +9,28 @@ class HeaderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    return const Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        ImageLogo(),
-        Flexible(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
-            child: Text(
-              'اجتماع شعاع نور',
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 30,
-              ),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
+          child: Text(
+            'اجتماع شعاع نور',
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 30,
             ),
           ),
         ),
-        ImageLogo(),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            ImageLogo(),
+
+            ImageLogo(),
+          ],
+        ),
       ],
     );
   }
